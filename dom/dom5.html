@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color:yellow; color:red">
+    <ul class="lan">
+        <li>java</li>
+    </ul>
+    
+</body>
+<script>
+    const chai=(lang) =>{
+        const r=document.createElement('li')
+           const text=document.createTextNode(lang)
+           r.appendChild(text)                              // optimised approach
+           document.querySelector(".lan").appendChild(r)
+    }
+    chai("C")
+    chai("JS")
+    //edit
+    const v =document.querySelector("li:nth-child(1)")
+    v.textContent="PYTHOn"
+    const vi=document.querySelector("li:nth-child(2)")
+    console.log(vi)
+    const r=document.createTextNode("GOLANG")
+    const old=vi.childNodes[0]
+    vi.replaceChild(r,old)
+    //another way
+    const f=document.querySelector("li:nth-child(1)")  // it used 1 based indexing
+    const few=document.createElement('li')
+    few.textContent="C++"
+    f.replaceWith(few)
+    //edit
+    const n=document.querySelector("li:first-child")
+    n.outerHTML="<li>TypeScript</li>"
+    //to remove
+    const bair=document.querySelector("li:nth-child(1)")
+    bair.remove()
+
+</script>
+</html>

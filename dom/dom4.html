@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            background-color: black;
+            color:black;
+        }
+    </style>
+</head>
+<body >
+    <script>
+        const p=document.createElement('h1')  //creating elements in dom
+        p.className="me"
+        p.id=Math.round(Math.random()*10+1)
+        p.style.backgroundColor="green"
+        p.style.color="yellow"
+        p.style.padding="100px"
+        //div.innerText="hey! hello how r u doing" or we can do
+        const a=document.createTextNode("hey hello how r u doing ")
+        p.appendChild(a)
+        console.log(p)
+
+        document.body.appendChild(p) // to add it in screen
+    </script>
+</body>
+</html>

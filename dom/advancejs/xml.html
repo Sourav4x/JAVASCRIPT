@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOCS</title>
+</head>
+<style>
+    #one img{
+      border-radius: 50%;
+            width: 100px;
+            height: 100px;
+    }
+    #one{
+        height:100vh;
+        display: inline-block;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+        padding:50px 250px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+    }
+</style>
+<body style="background-color:#a12c2c;color:antiquewhite">
+    <p>
+        0	UNSENT	Client has been created. open() not called yet.
+        1	OPENED	open() has been called.
+        2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+        3	LOADING	Downloading; responseText holds partial data.
+        4	DONE	The operation is complete.
+    </p>
+    <div class="i">
+  <div id="one">
+    <img src="https://avatars.githubusercontent.com/u/145861080?v=4"/>
+    <br>
+    <h4>Sourav paul</h4>
+    <h5>github</h5>
+    <p>Followers:1 </p>
+  </div>
+  </div>
+</body>
+<script>
+    const n=new XMLHttpRequest();
+    n.open('GET','https://api.github.com/users/sourav4x',true)
+    n.onreadystatechange=function(){
+
+        if(n.readyState===4)
+        {
+            const a=JSON.parse(this.responseText)
+            console.log(a.followers)
+            console.log(a.avatar_url)
+        }
+
+    }
+    n.send();
+    </script>
+</html>

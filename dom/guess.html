@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game </title>
+</head>
+<style>
+    body{
+        background-color: #212121;
+        text-align: center;
+        padding: 30px 50px;
+    }
+    a{
+        color:red
+    }
+
+    h1{
+        color: red;
+        background-color: yellow;
+        padding:10px 100px;
+        text-align: center;
+        flex-direction: column;
+        display: inline-block
+        
+    }
+    .col{
+        color: antiquewhite;
+        background-color: yellow;
+        
+    }
+    nav{
+        background-color:antiquewhite;
+    }
+    .result{
+        color:#212121;
+        background-color:whitesmoke;
+        display: inline-block;
+margin: 3px;
+border-color: blue;
+border-radius: 10px;
+    }
+    #subt{
+        margin-top: 30px;
+        padding: 5px 10px;
+    }
+    #field{
+        color: antiquewhite;
+        font-size:40px ;
+    }
+    .text{
+        padding: 10px 10px;
+    }
+</style>
+<body>
+    <nav>
+    <a href="https://www.youtube.com/watch?v=EGqHVjU-fas&list=PLu71SKxNbfoBuX3f4EOACle2y-tRC5Q37&index=35">YOUTUBE</a>
+    </nav>
+    <div>
+        <h1> NUMBER GUESSING GAME</h1>
+
+    </div>
+    <div id="wrap">
+    <form class="form">
+    <label2 for="guessField" id="field">Enter Guess</label>
+    <div id="one">
+    <input type="text" id="guessField" class="text">
+    </div>
+    <div id="two">
+    <input type="submit" id="subt" value="Submit">
+    </div>
+    </form>
+    <div class="result">
+        <p>Previous Guess:- <span class="res"></span></p>
+        <p>Guesses Remaining:- <span class="rem">10</span> </p>
+        <p class="low"></p>
+    </div>
+    </div>
+</body>
+<script src="ccc.js"></script>
+</html>

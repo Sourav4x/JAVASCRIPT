@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSE</title>
+</head>
+<body style="background-color: black;">
+    <h1 style="color: antiquewhite;">COMPUTER SCIENCE</h1>
+    <div>
+        <p id="one" style="color: antiquewhite;">HI</p>
+    </div>
+    <div>
+    <button class="me">start</button>
+    </div>
+    <div>
+        <button class="you">stop</button>
+    </div>
+</body>
+<script>
+    let b;
+    const a=() =>{
+        let d=new Date().toLocaleTimeString();
+    document.querySelector('#one').innerHTML=d
+    console.log(Date.now())
+    }
+    document.querySelector('.me').addEventListener('click',() =>{
+        b=setInterval(a,3000)
+    })
+    document.querySelector('.you').addEventListener('click',() =>{
+        clearInterval(b)
+    })
+</script>
+</html>

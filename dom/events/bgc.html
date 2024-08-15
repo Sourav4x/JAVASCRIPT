@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BGC</title>
+</head>
+<body id="yoo"style="background-color: black">
+    <button id="me">Start</button>
+    <button id="you">Stop</button>
+
+    
+</body>
+<script>
+    const a=document.querySelector('#me')
+    const b=document.querySelector('#you')
+    const bd=document.querySelector('#yoo')
+    let y;
+
+  
+
+  const func=() =>{
+    let hex='123456789ABCDEF'
+    let clr='#'
+    for(let i=0;i<6;i++)
+  {
+    clr+=hex[Math.floor(Math.random()*16)]
+    console.log(clr)
+  }
+        bd.style.backgroundColor = clr
+        console.log(clr)
+  }
+  a.addEventListener('click',(e) =>{
+    y=setInterval(func,3000)
+  })
+  b.addEventListener('click',(e) =>{
+    clearInterval(y);
+  })
+</script>
+</html>
